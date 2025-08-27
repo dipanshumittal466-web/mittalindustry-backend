@@ -5,6 +5,12 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+# ✅ Root route
+@app.route('/')
+def home():
+    return jsonify({"status": "Backend is running fine!"})
+
+
 @app.route('/products')
 def get_products():
     with open("products.json", "r", encoding="utf-8") as f:
