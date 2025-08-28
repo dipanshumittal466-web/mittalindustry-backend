@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mittal
+      POSTGRES_PASSWORD: mittalpass
+      POSTGRES_DB: mittaldb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  meilisearch:
+    image: getmeili/meilisearch:v1.2.1
+    environment:
+      MEILI_MASTER_KEY: masterKey
+    ports:
+      - '7700:7700'
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql://mittal:mittalpass@db:5432/mittaldb
+      JWT_SECRET: 'replace_this'
+      RAZORPAY_KEY_ID: ''
+      RAZORPAY_KEY_SECRET: ''
+      STRIPE_SECRET: ''
+    ports:
+      - '4000:4000'
+    depends_on:
+      - db
+      - meilisearch
+  frontend:
+    build: .
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+volumes:
+  db-data:
