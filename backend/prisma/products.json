@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Inverter",
+    "image": "/images/inverter.jpg",
+    "price": "₹8500"
+  },
+  {
+    "id": 2,
+    "name": "Battery",
+    "image": "/images/battery.jpg",
+    "price": "₹12500"
+  },
+  {
+    "id": 3,
+    "name": "LED Bulb",
+    "image": "/images/led.jpg",
+    "price": "₹120"
+  },
+  {
+    "id": 4,
+    "name": "Ceiling Fan",
+    "image": "/images/fan.jpg",
+    "price": "₹2500"
+  },
+  {
+    "id": 5,
+    "name": "Stabilizer",
+    "image": "/images/stabilizer.jpg",
+    "price": "₹3500"
+  },
+  {
+    "id": 6,
+    "name": "MCB",
+    "image": "/images/mcb.jpg",
+    "price": "₹450"
+  },
+  {
+    "id": 7,
+    "name": "RTC Timer",
+    "image": "/images/rtc.jpg",
+    "price": "₹800"
+  },
+  {
+    "id": 8,
+    "name": "Electric Wire (90m)",
+    "image": "/images/wire.jpg",
+    "price": "₹2200"
+  }
+]
